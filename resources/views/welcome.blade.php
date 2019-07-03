@@ -86,9 +86,9 @@
 
                 <p>Use the following for credentials for DEMO:</p>
                 <label>Username:</label>
-                <p>admin@admin.com</p>
+                <p><b>admin@admin.com</b></p>
                 <label>Password:</label>
-                <p>password</p>
+                <p><b>password</b></p>
             </div>
         </div>
     </body>
