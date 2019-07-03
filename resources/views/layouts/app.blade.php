@@ -12,6 +12,7 @@
     <!-- Scripts -->
     <!-- <script src="{{ asset('node_modules/jquery/dist/jquery.min.js') }}"></script> -->
     <!-- <script src="{{ asset('node_modules/konva/konva.min.js') }}"></script> -->
+    
     <script src="{{ asset('js/app.js') }}" ></script>
     <script src="{{ asset('js/RightClickMenu.js') }}" ></script>
 
@@ -22,6 +23,8 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/RightClickMenu.css') }}" rel="stylesheet">
+
+
 </head>
 <body>
     <div id="app">
@@ -63,6 +66,10 @@
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
+                                    </a>
+                                    <a class="dropdown-item" href="/admin"
+                                       onclick="">
+                                        Admin
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
