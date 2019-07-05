@@ -313,7 +313,7 @@ $(document).ready(function(){
         {
           this.stage = Konva.Node.create(data, 'container');
 
-            this.layer = this.stage.find('#mainLayer');//getLayers()[1];//new Konva.Layer();
+            this.layer = this.stage.find('#mainLayer')[0];//getLayers()[1];//new Konva.Layer();
 
             var me = this;
             this.layer.children.each(function(a){
