@@ -392,11 +392,14 @@ $(document).ready(function(){
 
         addSubMenu()
         {
+            $('#subMenuName').val('');
             $('#addSubMenu').modal();
         }
 
         addItem()
         {
+            $('#itemName').val('');
+            $('#itemValue').val('');
             $('#addItem').modal();
         }
 
