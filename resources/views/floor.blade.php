@@ -270,7 +270,7 @@ $(document).ready(function(){
   var height = window.innerHeight;
 
     k = new myCanvas();
-  @if($floor->data == '{}')
+  @if($floor->data == '{}' || $floor->data == '')
     k.init_fresh(width, height);
   @else
     k.init_with(<?php echo json_encode($floor->data) ?>);
@@ -313,7 +313,7 @@ $(document).ready(function(){
         {
           this.stage = Konva.Node.create(data, 'container');
 
-            this.layer = this.stage.getLayers()[1];//new Konva.Layer();
+            this.layer = this.stage.find('#mainLayer');//getLayers()[1];//new Konva.Layer();
 
             var me = this;
             this.layer.children.each(function(a){
@@ -348,7 +348,9 @@ $(document).ready(function(){
                 height: height
               });
 
-            this.layer = new Konva.Layer();
+            this.layer = new Konva.Layer({
+                id: 'mainLayer'
+            });
             
 
             this.stage.add(this.layer);
